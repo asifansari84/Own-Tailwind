@@ -2,7 +2,8 @@
 
 A lightweight utility-first CSS engine built with vanilla JavaScript. Users write
 classes that start with `chai-`, and the script converts those classes into
-inline styles after the page loads.
+inline styles after the page loads. It also keeps track of hover and responsive
+variants so styles can update when the user hovers or the viewport changes.
 
 ## Live links
 
@@ -17,7 +18,8 @@ inline styles after the page loads.
 3. Each class is parsed by utility groups: spacing, colors, typography, borders,
    layout, and effects.
 4. Valid declarations are applied with `element.style.setProperty(...)`.
-5. The original `chai-*` classes are removed after the inline styles are applied.
+5. Hover utilities are handled with mouse events, and responsive utilities are
+   re-rendered when breakpoint media queries change.
 
 Example:
 
@@ -49,6 +51,8 @@ padding: 2px;
   `chai-items-center`
 - Effects and states: `chai-shadow-md`, `chai-hover-bg-blue`
 - Responsive variants: `chai-sm-*`, `chai-md-*`, `chai-lg-*`
+
+The demo page currently uses 64 supported `chai-*` utility classes.
 
 ## Run locally
 
