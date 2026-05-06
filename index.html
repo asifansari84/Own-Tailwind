@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ChaiCSS Utility Engine</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script defer src="script.js"></script>
+	</head>
+	<body class="chai-bg-zinc-950 chai-text-zinc-100 chai-min-h-screen">
+		<div class="site-shell">
+			<header class="chai-max-w-screen-lg chai-mx-auto chai-px-20 chai-py-24">
+				<nav
+					class="chai-flex chai-flex-col chai-gap-14 chai-md-flex-row chai-md-items-center chai-md-justify-between"
+				>
+					<div class="brand-lockup">
+						<span class="brand-mark">C</span>
+						<div>
+							<p class="chai-text-lg chai-font-bold">ChaiCSS</p>
+							<p class="chai-text-sm chai-text-zinc-400">Chai Tailwind engine</p>
+						</div>
+					</div>
+					<div class="chai-flex chai-gap-10">
+						<span class="status-pill">DOM scan</span>
+						<span class="status-pill status-pill-accent">Inline styles</span>
+					</div>
+				</nav>
+
+				<section class="hero-grid chai-grid chai-gap-20 chai-md-items-center chai-mt-32">
+					<div class="hero-copy">
+						<p class="hero-eyebrow chai-uppercase chai-tracking-wider chai-text-emerald">
+							Introducing Chai Tailwind
+						</p>
+						<h1 class="hero-title chai-font-bold chai-mt-14">
+							Write classes. Watch styles brew.
+						</h1>
+						<p
+							class="hero-lede chai-text-zinc-300 chai-leading-relaxed chai-mt-18 chai-max-w-prose"
+						>
+							Write <code>chai-*</code> classes. The engine scans the DOM,
+							parses each token, applies inline styles, and re-renders
+							responsive states as the viewport changes.
+						</p>
+
+						<div class="chai-grid chai-grid-cols-1 chai-md-grid-cols-3 chai-gap-12 chai-mt-24">
+							<div class="metric-card">
+								<strong>64</strong>
+								<span>Utilities used on this page</span>
+							</div>
+							<div class="metric-card">
+								<strong>0</strong>
+								<span>Build tools required</span>
+							</div>
+							<div class="metric-card">
+								<strong>JS</strong>
+								<span>Own parser logic</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="terminal-card">
+						<div class="terminal-topbar">
+							<span></span>
+							<span></span>
+							<span></span>
+							<p>chai-engine.js</p>
+						</div>
+						<pre><code data-sample-code>&lt;div class="chai-bg-red chai-text-white chai-text-center chai-p-2"&gt;
+  Hello ChaiCSS
+&lt;/div&gt;</code></pre>
+						<div
+							class="chai-bg-red chai-text-white chai-text-center chai-rounded-xl chai-p-2 chai-mt-18"
+						>
+							chai-p-2 -> padding: 2px
+						</div>
+						<div class="parse-output chai-mt-16">
+							<p><span>bg-red</span> background-color: red</p>
+							<p><span>text-center</span> text-align: center</p>
+							<p><span>p-2</span> padding: 2px</p>
+						</div>
+					</div>
+				</section>
+			</header>
+
+			<main class="chai-max-w-screen-lg chai-mx-auto chai-px-20 chai-pb-44">
+				<section class="chai-grid chai-gap-16 chai-md-grid-cols-3">
+					<article class="feature-card">
+						<span class="feature-index">01</span>
+						<h2 class="chai-text-xl chai-font-bold chai-mt-12">Traverse DOM</h2>
+						<p class="chai-text-zinc-400 chai-leading-relaxed chai-mt-10">
+							`querySelectorAll` finds every node that contains a `chai-`
+							class after the page is ready.
+						</p>
+					</article>
+					<article class="feature-card">
+						<span class="feature-index">02</span>
+						<h2 class="chai-text-xl chai-font-bold chai-mt-12">Parse tokens</h2>
+						<p class="chai-text-zinc-400 chai-leading-relaxed chai-mt-10">
+							Spacing, colors, typography, borders, layout, effects, hover, and
+							breakpoints are handled by separate parser functions.
+						</p>
+					</article>
+					<article class="feature-card">
+						<span class="feature-index">03</span>
+						<h2 class="chai-text-xl chai-font-bold chai-mt-12">Apply styles</h2>
+						<p class="chai-text-zinc-400 chai-leading-relaxed chai-mt-10">
+							The final declarations are applied with `setProperty`, then
+							updated again for hover and breakpoint state.
+						</p>
+					</article>
+				</section>
+
+				<section class="showcase-card chai-mt-24">
+					<div
+						class="chai-flex chai-flex-col chai-gap-18 chai-md-flex-row chai-md-items-center chai-md-justify-between"
+					>
+						<div>
+							<p class="chai-text-sm chai-uppercase chai-tracking-wider chai-text-amber">
+								Live interface demo
+							</p>
+							<h2 class="chai-text-3xl chai-font-bold chai-mt-8">
+								A real screen styled through chai utilities.
+							</h2>
+						</div>
+						<button
+							class="chai-bg-emerald chai-hover-bg-cyan chai-text-zinc-950 chai-border-0 chai-rounded-full chai-px-24 chai-py-12 chai-font-bold chai-cursor-pointer"
+							type="button"
+							data-copy-demo
+						>
+							Copy demo
+						</button>
+					</div>
+
+					<div class="chai-grid chai-grid-cols-1 chai-md-grid-cols-2 chai-gap-18 chai-mt-24">
+						<div class="preview-panel">
+							<div class="preview-header">
+								<span></span>
+								<p>Generated preview</p>
+							</div>
+							<div
+								class="chai-bg-zinc-900 chai-border chai-border-zinc-700 chai-rounded-2xl chai-p-22"
+							>
+								<p class="chai-text-sm chai-text-emerald chai-font-bold">
+									Responsive layout
+								</p>
+								<h3 class="chai-text-2xl chai-font-bold chai-mt-8">
+									`chai-md-grid-cols-2`
+								</h3>
+								<p class="chai-text-zinc-400 chai-leading-relaxed chai-mt-10">
+									The same class parser supports breakpoint prefixes and reapplies
+									inline styles when the viewport changes.
+								</p>
+							</div>
+							<div
+								class="chai-bg-zinc-900 chai-border chai-border-zinc-700 chai-rounded-2xl chai-p-22 chai-mt-14"
+							>
+								<p class="chai-text-sm chai-text-cyan chai-font-bold">Hover state</p>
+								<h3 class="chai-text-2xl chai-font-bold chai-mt-8">
+									`chai-hover-bg-cyan`
+								</h3>
+								<p class="chai-text-zinc-400 chai-leading-relaxed chai-mt-10">
+									Hover utilities are handled with JavaScript event listeners, not
+									prewritten utility CSS.
+								</p>
+							</div>
+						</div>
+
+						<div class="utility-panel">
+							<h3 class="chai-text-2xl chai-font-bold">Supported utility groups</h3>
+							<div class="utility-list chai-mt-16">
+								<p><strong>Spacing</strong><span>chai-p-24, chai-mx-auto</span></p>
+								<p><strong>Colors</strong><span>chai-bg-red, chai-text-white</span></p>
+								<p><strong>Typography</strong><span>chai-text-xl, chai-font-bold</span></p>
+								<p><strong>Borders</strong><span>chai-border, chai-rounded-xl</span></p>
+								<p><strong>Layout</strong><span>chai-grid, chai-gap-18</span></p>
+								<p><strong>States</strong><span>chai-hover-bg-cyan</span></p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+	</body>
+</html>
